@@ -15,3 +15,6 @@ Petit projet démontrant le développement piloté par les tests (TDD) :
 ```bash
 python3 -m unittest TestErrorFizzBuzz.py -v
 ```
+## Première évolution du code
+
+Ajout du paramètre n dans la fonction **affiche()**

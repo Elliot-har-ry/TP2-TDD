@@ -13,13 +13,18 @@ class FizzBuzz:
             return "Buzz"
         return str(n)
 
-    def affiche(self):
-        """Construit la chaîne finale concaténée"""
-        return "".join(self._mot_pour(i) for i in range(self.debut, self.fin + 1))
+    def affiche(self, n=None):
+        """Construit la chaîne finale concaténée.
+        Si n est fourni → affiche de 1 à n.
+        Sinon → affiche de self.debut à self.fin.
+        """
+        # Si un paramètre n est passé, on l’utilise à la place de self.fin
+        limite = n if n is not None else self.fin
+        return "".join(self._mot_pour(i) for i in range(self.debut, limite + 1))
 
 
 # Démonstration
 if __name__ == "__main__":
     fizz = FizzBuzz()
-    print(fizz.affiche())
+    print(fizz.affiche(15))
 
